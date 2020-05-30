@@ -11,7 +11,7 @@ void DivSumPair (vector< int > v, int num) {
         while (j < v.size ()) {
 
             sum = v.at(i) + v.at (j);
-            //cout << i << " " << j << " " << sum << endl;
+            //* TESTING : cout << i << " " << j << " " << sum << endl;
             if (sum % num == 0) count++;
             j++;
         }
@@ -21,12 +21,13 @@ void DivSumPair (vector< int > v, int num) {
 
 int main ()
 {
-
     ios_base :: sync_with_stdio (false); cin.tie (NULL); cout.tie (NULL);
 
     int size, num;
     cin >> size >> num;
+    
     vector< int > v(size);
     for (size_t i = 0; i < size; ++i) cin >> v[i];
+
     DivSumPair (v, num);
 }
